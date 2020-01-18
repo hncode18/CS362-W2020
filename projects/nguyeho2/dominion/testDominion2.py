@@ -21,7 +21,7 @@ supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
                 3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
                 4:['Gardens','Bureaucrat','Feast','Militia','Moneylender','Remodel','Smithy','Spy','Thief','Throne Room'],
                 5:['Duchy','Market','Council Room','Festival','Laboratory','Library','Mine','Witch'],
-                6:['Gold','Adventurer'],8:['Province']}
+                6:['Gold','Adventurer'],7:['Province']}   # Change the value of Province to 7 instead of 9 to introduce bugs
 
 # Initialize supply
 supply = testUtility.initSupply(box, nV, nC, player_names)

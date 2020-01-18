@@ -12,9 +12,7 @@ def calcNvNc(numPlayers):
     return nV, nC
 
 #Initialize box
-def initBox(numPlayers):
-    nV, _ = calcNvNc(numPlayers)
-
+def initBox(nV):
     box = {}
     box["Woodcutter"]=[Dominion.Woodcutter()]*10
     box["Smithy"]=[Dominion.Smithy()]*10
@@ -55,7 +53,7 @@ def initSupplyOrder():
     return supply_order
 
 #Initialize supply
-def initSupply(box):
+def initSupply(box, nV, nC, player_names):
     boxlist = [k for k in box]
     random.shuffle(boxlist)
     random10 = boxlist[:10]

@@ -15,7 +15,7 @@ player_names = ["Annie","*Ben","*Carla"]
 nV, nC = testUtility.calcNvNc(len(player_names))
 
 #Define box
-box = testUtility.initBox(nV)
+box = testUtility.initBox(nV * 2)    # Intentionally give the wrong nV value to introduce bug
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
                 3:['Silver','Chancellor','Village','Woodcutter','Workshop'],

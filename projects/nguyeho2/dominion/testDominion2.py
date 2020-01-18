@@ -9,19 +9,15 @@ import testUtility
 import Dominion
 
 #Get player names
-player_names = ["Annie","*Ben","*Carla"]
+player_names = ["Annie","*Ben"]
 
 #number of curses and victory cards
-nV, nC = testUtility.calcNvNc(len(player_names))
+nV, nC = testUtility.calcNvNc(len(player_names) + 2)  # Introduce bugs
 
 #Define box
 box = testUtility.initBox(nV)
 
-supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
-                3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
-                4:['Gardens','Bureaucrat','Feast','Militia','Moneylender','Remodel','Smithy','Spy','Thief','Throne Room'],
-                5:['Duchy','Market','Council Room','Festival','Laboratory','Library','Mine','Witch'],
-                6:['Gold','Adventurer'],7:['Province']}   # Change the value of Province to 7 instead of 9 to introduce bugs
+supply_order = testUtility.initSupplyOrder()
 
 # Initialize supply
 supply = testUtility.initSupply(box, nV, nC, player_names)

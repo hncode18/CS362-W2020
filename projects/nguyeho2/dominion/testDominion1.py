@@ -17,11 +17,7 @@ nV, nC = testUtility.calcNvNc(len(player_names))
 #Define box
 box = testUtility.initBox(nV * 2)    # Intentionally give the wrong nV value to introduce bug
 
-supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
-                3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
-                4:['Gardens','Bureaucrat','Feast','Militia','Moneylender','Remodel','Smithy','Spy','Thief','Throne Room'],
-                5:['Duchy','Market','Council Room','Festival','Laboratory','Library','Mine','Witch'],
-                6:['Gold','Adventurer'],8:['Province']}
+supply_order = testUtility.initSupplyOrder()
 
 # Initialize supply
 supply = testUtility.initSupply(box, nV, nC, player_names)
